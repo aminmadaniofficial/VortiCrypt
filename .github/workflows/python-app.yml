@@ -3,8 +3,24 @@ name: VortiCrypt CI
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - 'docs/**'
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - 'docs/**'
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
 
 jobs:
   test:
