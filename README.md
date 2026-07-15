@@ -21,12 +21,12 @@ Since VortiCrypt operates in 3D coordinate space, the cipher block size is exact
 
 ### 2. Key Derivation Function (KDF)
 The user-provided variable-length key is deterministically mapped to three rotation angles $(\theta_x, \theta_y, \theta_z)$ in degrees using prime scaling multipliers to limit linear correlation:
-$$\text{hash\_val} = \sum_{i=0}^{N-1} (\text{ASCII}(key[i]) \times (i + 1))$$
+$$\text{hash} = \sum_{i=0}^{N-1} (\text{ASCII}(key[i]) \times (i + 1))$$
 
 The angles are calculated as:
-$$\theta_x = (\text{hash\_val} \times 17) \pmod{360}$$
-$$\theta_y = (\text{hash\_val} \times 31) \pmod{360}$$
-$$\theta_z = (\text{hash\_val} \times 47) \pmod{360}$$
+$$\theta_x = (\text{hash} \times 17) \pmod{360}$$
+$$\theta_y = (\text{hash} \times 31) \pmod{360}$$
+$$\theta_z = (\text{hash} \times 47) \pmod{360}$$
 
 *Fallback:* If any calculated angle resolves to $0^\circ$, it is assigned a default fallback value ($\theta_x=45^\circ$, $\theta_y=90^\circ$, $\theta_z=135^\circ$) to guarantee spatial dispersion.
 
