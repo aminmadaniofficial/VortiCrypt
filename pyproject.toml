@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vorticrypt"
+version = "0.1.0"
+description = "An esoteric 3D vector rotation cipher engine with real-time OpenGL visualization"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyQt6>=6.4.0",
+    "pyqtgraph>=0.13.1",
+    "PyOpenGL>=3.1.6",
+    "numpy>=1.22.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/aminmadaniofficial/VortiCrypt"
+
+[project.scripts]
+vorticrypt = "vorticrypt.cli:main"
