@@ -1,0 +1,21 @@
+vorticrypt/
+├── README.md
+├── requirements.txt
+├── setup.py
+├── tests/
+│   ├── __init__.py
+│   └── test_cipher.py
+└── vorticrypt/
+    ├── __init__.py
+    ├── core/
+    │   ├── __init__.py
+    │   ├── padding.py
+    │   ├── kdf.py
+    │   └── cipher.py
+    ├── utils/
+    │   ├── __init__.py
+    │   └── math_helpers.py
+    └── gui/
+        ├── __init__.py
+        ├── canvas_3d.py
+        └── app.py
